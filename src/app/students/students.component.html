@@ -1,0 +1,9 @@
+<table border="1">
+  <th>ID</th><th>Reg No</th><th>Name</th><th>CGPA</th>
+  <tr *ngFor='let row of result'>
+    <td><a [routerLink]="['detail',row.id]">{{row.id}}</a></td>
+    <td>{{row.regno}}</td>
+    <td>{{row.stuname}}</td>
+    <td>{{row.cgpa}}</td>
+  </tr>  
+</table>

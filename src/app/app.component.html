@@ -1,21 +1,211 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<!-- <h1>Parent Side</h1>
+<div>
+  <div class='split left'>    
+    <h2>
+      {{ title | uppercase}}!
+    </h2>
+    <h4>String Array</h4>
+    <div>
+      <ul *ngFor='let f of friends'>
+        <li>{{f}}</li>
+      </ul>
+    </div>
+    <h4>Student Array</h4>
+    <div [ngStyle]="{'color':'red'}">
+      <ul *ngFor='let f of myfrinends'>
+        <li>{{f.stuname}} - {{f.cgpa}}</li>
+      </ul>
+    </div>    
+    <p>
+      Messgae from Child : {{msg_from_child}}
+    </p>
+  </div>
+  <div  class='split right'>
+    <app-header (outparam) = 'receiveStudent($event)' [msg_from_parent]='msg_to_child'>Click</app-header>
+  </div>
+</div> -->
+
+<!-- <div>
+  <p>
+    <input type='text' [(ngModel)]='title' />
+  </p>
+  <p>
+    <button (click)='incFontSize()'>+</button>
+    <button (click)='decFontSize()'>-</button>
+    <button (click)='swithCssOnOff()'>On/Off CSS</button>
+    <button (click)='showHide()'>Show / Hide</button>
+  </p>
+  <div>
+    <input type='text' [(ngModel)]='myfontsize' />
+    <div [ngSwitch]='myfontsize'>
+        <div *ngSwitchCase='30'>One</div>
+        <div *ngSwitchCase='35'>Two</div>
+        <div *ngSwitchCase='40'>Three</div>
+    </div>
+  </div>
+  <p [ngStyle]="{'color':myfontcolor,'font-size.px':myfontsize}">
+    {{title}}
+  </p>
+  <p *ngIf='showme' [ngClass]="{'myclass':myneed}">
+    {{title}}
+  </p>
+<div>
+  <p>
+    {{title | uppercase}}
+    <br>
+    {{today | date:'short'}}
+    <br>
+    {{today | date:'short' | lowercase}}
+    <br>
+    {{today | date:'full'}}
+    <br>
+    {{today | date:'dd/MM/yyyy'}}
+    <br>
+    {{today | date:'shortTime'}}
+    <br>
+    {{today | date:'HH:mm:ss'}}
+
+  </p>
+
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+</div> -->
+
+
+<!-- <div>
+  <p>{{pi}}</p>
+  <p>{{pi | number}}</p>
+  <p>{{pi | number:'2.0-3'}}</p>  
+</div>
+
+<div>
+  <p>{{salary}}</p>
+  <p>{{salary | currency}}</p>
+  <p>{{salary | currency:'INR'}}</p>  
+</div>
+
+<div>
+  <p>{{s1 | json}}</p>
+  <p>{{title | slice:0:9}}</p>
+</div>
+<div>
+  <p>{{data | myPipe:3}}</p>
+</div>
+ -->
+
+<!-- <form #myform='ngForm' (ngSubmit)='registration(myform)' novalidate>
+  <input type='text' name='uid' placeholder="Enter your id" ngModel #rid='ngModel' required /><br>
+  <input type='text' name='uname' placeholder="Enter your name" ngModel #rname='ngModel' required /><br>
+  <input type='text' name='ucgpa' placeholder="Enter your cgpa" ngModel #rcgpa='ngModel' required /><br>
+  <input type='submit' value='REG' />
+</form>
+
+<div>
+  <p>Value : {{rname.value}}</p>
+  <p>Valid : {{rname.valid}}</p>
+  <p>Touched : {{myform.touched}}</p>
+  <p>Invalid : {{myform.invalid}}</p>
+</div> -->
+
+
+
+<!-- <div>
+  <p>Value : {{myform.value | json}}</p>
+  <p>Valid : {{myform.valid}}</p>
+  <p>Touched : {{myform.touched}}</p>
+  <p>Submitted : {{myform.submitted}}</p>
+</div> -->
+
+
+<!-- <form [formGroup]='regForm' novalidate>
+  <input type='text' formControlName='userid'/>
+
+  <div *ngIf='regForm.controls.username.touched && regForm.controls.username.invalid'>
+    Not a valid
+  </div>
+  <input type='text' formControlName='username' />
+  <input type='text' formControlName='usercgpa' />
+
+  <br>
+  <button (click)='setMyValues()'>Change</button>
+</form>
+
+<div>
+  <p>{{regForm.value | json}}</p>
+  <p>{{regForm.valid | json}}</p>
+</div> -->
+
+<!-- <form [formGroup]='myNewForm' novalidate>
+  <input type='text' formControlName='user_id'/>
+
+  <div *ngIf='myNewForm.controls.user_name.touched && myNewForm.controls.user_name.invalid'>
+    Not a valid
+  </div>
+  <input type='text' formControlName='user_name' />
+  <input type='text' formControlName='user_cgpa' />
+
+  <br>
+  <button (click)='setMyValues()'>Change</button>
+</form>
+
+<div>
+  <p>{{myNewForm.value | json}}</p>
+  <p>{{myNewForm.valid}}</p>
+</div>
+
+<button (click)='getDataFromDB()'>Get Details</button>
+<h2>Owners Details</h2>
+<div *ngFor='let own of ownerdata'>
+  <p>{{own.ownerName}} **** {{own.vehicleType}}</p>
+  <p></p>
+</div>
+
+<h2>Data From REST API</h2>
+<button (click)='getDataFromBackEnd()'>GET REST DATA</button>
+<div>
+  {{result |json}}
+</div>
+<div *ngIf='comp'>
+  This is success
+</div>
+<div *ngIf='showerror'>
+  There is an REST API issue
+</div>
+
+<button (click)='getData()'>GET DATA FROM JSON SERVER</button>
+<div>
+  {{myjson | json}}
+</div>
+
+<h2>Registration Form</h2>
+<form [formGroup]='myRegForm' (ngSubmit)='addData()'>
+
+  <input type='text' formControlName='id'/><br>
+  <input type='text' formControlName='regno'/><br>
+  <input type='text' formControlName='stuname'/><br>
+  <input type='text' formControlName='cgpa'/><br>
+  <input type='submit' value='Registration' />
+</form>
+<br>
+{{msg}}
+
+<button (click)='updateData()'>Update</button>
+<!-- <div *ngIf='flag; else test'>
+  Updated Successful
+</div>
+<ng-template #test>Update Failed</ng-template>
+<button (click)='deleteData()'>Delete</button>
+
+<div>
+  <ul>
+    <li><a [routerLink]="['header']">Header</a></li>
+    <li><a [routerLink]="['footer']">Footer</a></li>
+    <li><a [routerLink]="['contact']">Contact</a></li>
+    <li><a [routerLink]="['student']">Students</a></li>
+  </ul>
+</div>
 
 <router-outlet></router-outlet>
+-->
+
+<app-blogic></app-blogic>

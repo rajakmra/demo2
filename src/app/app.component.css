@@ -1,0 +1,26 @@
+.split
+{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+}
+
+.left
+{
+
+    left: 0;
+    background-color:palegreen;
+}
+
+.right{
+
+    right: 0;
+    background-color:rosybrown;
+}
+
+.myclass
+{
+    color:orangered;
+    font-style: italic;
+    background-color: papayawhip;
+}

@@ -1,0 +1,12 @@
+<h2>header works</h2>
+<p>Mesage from Parent : {{msg_from_parent}}</p>
+<input type='text' #mymsg />
+<button (click)='sendMessage(mymsg.value)'>Send Message to Parent</button>
+<input type='text' placeholder='enter your friend name' #myfr />
+<button (click)='sendName(myfr.value)'><ng-content></ng-content></button>
+
+<input type='text' placeholder='enter your regno' #rno />
+<input type='text' placeholder='enter your name' #nam />
+<input type='text' placeholder='enter your cgpa' #cgpa />
+<button (click)='sendStudent(rno.value,nam.value,cgpa.value)'>TEST</button>
+

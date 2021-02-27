@@ -1,0 +1,4 @@
+<div>
+  Bootstrap Mode
+By default, Spring Data JPA repositories are default Spring beans. They are singleton scoped and eagerly initialized. During startup, they already interact with the JPA EntityManager for verification and metadata analysis purposes. Spring Framework supports the initialization of the JPA EntityManagerFactory in a background thread because that process usually takes up a significant amount of startup time in a Spring application. To make use of that background initialization effectively, we need to make sure that JPA repositories are initialized as late as possible.
+</div>
